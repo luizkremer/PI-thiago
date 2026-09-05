@@ -1,0 +1,19 @@
+<h2>Exercício 10 - Login simulado</h2>
+
+<p>
+  <label>Usuário:</label><br>
+  <input type="text" [(ngModel)]="usuario">
+</p>
+
+<p>
+  <label>Senha:</label><br>
+  <input type="password" [(ngModel)]="senha">
+</p>
+
+<button
+  (click)="entrar()"
+  [disabled]="usuario === '' || senha === ''">
+  Entrar
+</button>
+
+<p *ngIf="mensagem">{{ mensagem }}</p>
