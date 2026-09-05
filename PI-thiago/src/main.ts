@@ -1,7 +1,11 @@
-import { platformBrowser } from '@angular/platform-browser';
-import { AppModule } from './app/app-module';
+import { bootstrapApplication } from '@angular/platform-browser';
+import { importProvidersFrom } from '@angular/core';
 
-platformBrowser().bootstrapModule(AppModule, {
-  
-})
-  .catch(err => console.error(err));
+import { App } from './app/app';
+import { AppRoutingModule } from './app/app-routing-module';
+
+bootstrapApplication(App, {
+  providers: [
+    importProvidersFrom(AppRoutingModule)
+  ]
+}).catch((err: unknown) => console.error(err));

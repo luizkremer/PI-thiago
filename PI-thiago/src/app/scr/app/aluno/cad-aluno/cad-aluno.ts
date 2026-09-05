@@ -6,4 +6,6 @@ import { Component } from '@angular/core';
   templateUrl: './cad-aluno.html',
   styleUrl: './cad-aluno.css',
 })
-export class CadAluno {}
+export class CadAluno {
+  nome = 'Luiz';
+}
