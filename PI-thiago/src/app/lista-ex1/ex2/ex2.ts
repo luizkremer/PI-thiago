@@ -10,4 +10,8 @@ export class Ex2 {
   produto = 'Teclado';
   preco = 150;
   quantidade = 3;
+
+  get total(): number {
+    return this.preco * this.quantidade;
+  }
 }

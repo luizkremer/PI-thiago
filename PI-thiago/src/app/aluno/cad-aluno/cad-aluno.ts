@@ -4,6 +4,8 @@ import { Component } from '@angular/core';
   selector: 'app-cad-aluno',
   standalone: false,
   templateUrl: './cad-aluno.html',
-  styleUrl: './cad-aluno.css',
+  styleUrl: './cad-aluno.css'
 })
-export class CadAluno {}
+export class CadAluno {
+  nome = 'Luiz';
+}

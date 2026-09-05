@@ -8,6 +8,6 @@ import { Component } from '@angular/core';
 })
 export class Ex1 {
   nome = 'Luiz';
-  idade = 25;
+  idade = 20;
   curso = 'Engenharia de Software';
 }

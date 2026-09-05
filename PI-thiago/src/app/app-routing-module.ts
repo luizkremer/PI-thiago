@@ -2,14 +2,23 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-
   {
     path: 'livros',
-    loadChildren: () => import('./livros/livros-module').then(m => m.LivrosModule)
+    loadChildren: () =>
+      import('./livros/livros-module')
+        .then(m => m.LivrosModule)
   },
   {
     path: 'aluno',
-    loadChildren: () => import('./aluno/aluno-module').then(m => m.AlunoModule)
+    loadChildren: () =>
+      import('./aluno/aluno-module')
+        .then(m => m.AlunoModule)
+  },
+  {
+    path: '',
+    loadChildren: () =>
+      import('./lista-ex1/lista-ex1-module')
+        .then(m => m.ListaEx1Module)
   }
 ];
 
@@ -17,4 +26,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
